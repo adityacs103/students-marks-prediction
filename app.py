@@ -26,9 +26,11 @@ def predict():
     # if input_features[0] <0 or input_features[0] >24:
     #     return render_template('index.html', prediction_text='Please enter valid hours between 1 to 24 if you live on the Earth 😂')
 
-    if input_features[0] > 12.9 and input_features[0] < 23:
-        return render_template('index.html', prediction_text='Please please take rest sometimes')
-    elif input_features[0] < 0 or input_features[0] > 23:
+    if input_features[0] == 0:
+        return render_template('index.html', prediction_text='Please go and start study to get score')
+    elif input_features[0] > 12 and input_features[0] < 25:
+        return render_template('index.html', prediction_text='Please take rest sometimes')
+    elif input_features[0] < 0 or input_features[0] > 24:
         return render_template('index.html', prediction_text='Please enter valid hours between 1 to 24 if you live on the Earth 😂')
 
     output = model.predict([features_value])[0][0].round(2)
