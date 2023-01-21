@@ -1,8 +1,8 @@
-Flask==2.2.2
-Jinja2==3.1.2
-joblib==1.2.0
-numpy==1.24.1
-pandas==1.5.3
-python-dateutil==2.8.2
+Flask
+Jinja2
+joblib
+numpy
+pandas
+python-dateutil
 gunicorn
 pip==22.3.1
